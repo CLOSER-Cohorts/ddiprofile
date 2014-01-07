@@ -8,8 +8,9 @@
         I specify the xpath predicate [1] when I implement a non-repeatable version of a repeatable DDI element.
         I assume and don't explicitely specify NotUsed with predicate [position()>1] for further sibling elements.
         I assume the default Description from the DDI specifications.
-        (to do:)I specify the terminology used in the GUI in the AlternateName element.
-        (to do:)I specify in the Instructions element any validation implemented in the GUI and any recommended usage conventions.
+        I specify the terminology used in the GUI in the AlternateName element.
+        I specify in the Instructions element any validation implemented in the GUI.
+        Nb: on the last two points, additional terminology and validation are used in the GUI which relate to the database schema and not necessarily to the ddi output.
         For every text element I assume a fixed attribute xml:lang="en-GB".
         The versionDate attribute is an ISO timestamp of the date and time the file was generated.
       </r:Description>
@@ -26,6 +27,10 @@
       <pr:XMLPrefixMap>
         <pr:XMLPrefix>dc2</pr:XMLPrefix>
         <pr:XMLNamespace>http://purl.org/dc/elements/1.1/</pr:XMLNamespace>
+      </pr:XMLPrefixMap>
+      <pr:XMLPrefixMap>
+        <pr:XMLPrefix>g</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:group:3_1</pr:XMLNamespace>
       </pr:XMLPrefixMap>
       <pr:XMLPrefixMap>
         <pr:XMLPrefix>d</pr:XMLPrefix>
@@ -67,7 +72,9 @@
       
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection[1]" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme[1]" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme[1]">
+        <pr:AlternateName xml:lang="en">spine</pr:AlternateName>
+      </pr:Used>
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:ControlConstructSchemeName[1]" />
 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Sequence" />
@@ -84,7 +91,10 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ConstructName[1]" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Code" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Code">
+        <pr:Instructions xml:lang="en">validation: only_integer allow_nil</pr:Instructions>
+      </pr:Used>       
+
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Code" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ControlConstructReference" />
@@ -98,8 +108,12 @@
 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ConstructName[1]" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Code" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition">
+        <pr:AlternateName xml:lang="en">condition</pr:AlternateName>
+      </pr:Used>       
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Code">
+        <pr:Instructions xml:lang="en">validation: presence ascii_format</pr:Instructions>
+      </pr:Used>       
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:Scheme" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:Scheme/r:ID" />
@@ -117,9 +131,13 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:IdentifyingAgency" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:Version" />
 
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct">
+        <pr:AlternateName xml:lang="en">question component</pr:AlternateName>
+      </pr:Used>
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ConstructName[1]" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference">
+        <pr:Instructions xml:lang="en">validation: presence</pr:Instructions>
+      </pr:Used>             
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:Scheme" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:Scheme/r:ID" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:Scheme/r:IdentifyingAgency" />
@@ -127,7 +145,9 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:ID" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:IdentifyingAgency" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:Version" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ResponseUnit" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ResponseUnit">
+        <pr:Instructions xml:lang="en">validation: presence</pr:Instructions>
+      </pr:Used>             
 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:StatementItem" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:ConstructName[1]" />
@@ -146,16 +166,24 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:Instrument/d:ControlConstructReference/r:IdentifyingAgency" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/g:DataCollection/d:DataCollection/d:Instrument/d:ControlConstructReference/r:Version" />
 
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme[1]" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme[1]">
+        <pr:AlternateName xml:lang="en">question library</pr:AlternateName>
+      </pr:Used>      
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionSchemeName[1]" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName[1]" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText[1]" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText/d:LiteralText" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText/d:LiteralText/d:Text" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionIntent" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText/d:LiteralText/d:Text">
+        <pr:Instructions xml:lang="en">validation: presence ascii_format</pr:Instructions>
+      </pr:Used>       
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionIntent">
+        <pr:Instructions xml:lang="en">validation: ascii_format</pr:Instructions>
+      </pr:Used> 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomain" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomain/r:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomain/r:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/d:CodeSchemeReference" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/d:CodeSchemeReference/r:ID" />
@@ -165,13 +193,19 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomain/r:NumberRange" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomain/r:NumberRange/r:Low" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomain/r:NumberRange/r:High" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomain/d:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomain/d:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:DateTimeDomain" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:DateTimeDomain/d:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:DateTimeDomain/d:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:TextDomain" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:TextDomain/r:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:TextDomain/r:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:CodeDomain" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:CodeDomain/d:CodeSchemeReference" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:CodeDomain/d:CodeSchemeReference/r:ID" />
@@ -181,18 +215,28 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:NumericDomain/r:NumberRange" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:NumericDomain/r:NumberRange/r:Low" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:NumericDomain/r:NumberRange/r:High" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:NumericDomain/d:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:NumericDomain/d:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:DateTimeDomain" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:DateTimeDomain/d:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:DateTimeDomain/d:Label">
+        <pr:AlternateName xml:lang="en">description</pr:AlternateName>
+      </pr:Used>      
 
 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:CategorySchemeName" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category/l:CategoryName" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category/r:Label" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category/r:Label">
+        <pr:AlternateName xml:lang="en">category text</pr:AlternateName>
+        <pr:Instructions xml:lang="en">validation: presence ascii_format</pr:Instructions>
+      </pr:Used> 
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme" />
-      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:CodeSchemeName" />
+      <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/r:Label">
+        <pr:AlternateName xml:lang="en">short description</pr:AlternateName>
+        <pr:Instructions xml:lang="en">validation: presence ascii_format</pr:Instructions>
+      </pr:Used>       
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:Code" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:Code/l:CategoryReference" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:Code/l:CategoryReference/r:Scheme" />
