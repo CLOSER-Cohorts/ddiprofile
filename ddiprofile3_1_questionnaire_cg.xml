@@ -1,7 +1,8 @@
-<pr:DDIProfile xsi:schemaLocation="ddi:instance:3_1 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd" id="CADDIESv0.10" version="1.0.0" versionDate="2013-08-28" agency="uk.cls">      
-      <pr:DDIProfileName xml:lang="en">DDI Profile implemented by CADDIES version 0.10</pr:DDIProfileName>
-      <r:Label xml:lang="en">CADDIES v0.10 DDI Profile</r:Label>
-      <r:Description xml:lang="en">DDI3.1 Profile as implemented in CADDIES v0.10 and exportable as xml.
+<ddi:DDIInstance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:instance:3_1 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/instance.xsd" xmlns:a="ddi:archive:3_1" xmlns:c="ddi:conceptualcomponent:3_1" xmlns:d="ddi:datacollection:3_1" xmlns:ddi="ddi:instance:3_1" xmlns:dc="ddi:dcelements:3_1" xmlns:dc2="http://purl.org/dc/elements/1.1/" xmlns:g="ddi:group:3_1" xmlns:l="ddi:logicalproduct:3_1" xmlns:p="ddi:physicaldataproduct:3_1" xmlns:pi="ddi:physicalinstance:3_1" xmlns:r="ddi:reusable:3_1" xmlns:s="ddi:studyunit:3_1" xmlns:pr="ddi:ddiprofile:3_1" id="CADDIESv0.11" isMaintainable="true" version="1.0.0" versionDate="2014-01-07" agency="uk.cls">
+<pr:DDIProfile xsi:schemaLocation="ddi:instance:3_1 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/XMLSchema/profile.xsd" id="CADDIESv0.11" version="1.0.0" versionDate="2014-01-07" agency="uk.cls">      
+      <pr:DDIProfileName xml:lang="en">DDI Profile implemented by CADDIES version 0.11</pr:DDIProfileName>
+      <r:Label xml:lang="en">CADDIES v0.11 DDI Profile</r:Label>
+      <r:Description xml:lang="en">DDI3.1 Profile as implemented in CADDIES v0.11 and exportable as xml.
         The template for the xml output was originally modelled after a Colectica export file.
         In this document, I explicitely include as Used the elements implemented in the software.
         I do not assume that all the child-elements of a used element are used.
@@ -10,7 +11,7 @@
         I assume the default Description from the DDI specifications.
         I specify the terminology used in the GUI in the AlternateName element.
         I specify in the Instructions element any validation implemented in the GUI.
-        Nb: on the last two points, additional terminology and validation are used in the GUI which relate to the database schema and not necessarily to the ddi output.
+        Additional terminology and validation which relate to the database schema only are used in the GUI and are not specified here.
         For every text element I assume a fixed attribute xml:lang="en-GB".
         The versionDate attribute is an ISO timestamp of the date and time the file was generated.
       </r:Description>
@@ -248,3 +249,4 @@
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:Code/l:CategoryReference/r:Version" />
       <pr:Used path="/ddi:DDIInstance/g:ResourcePackage/l:CodeScheme/l:Code/l:Value" />
 </pr:DDIProfile>
+</ddi:DDIInstance>
