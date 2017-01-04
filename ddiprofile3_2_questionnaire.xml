@@ -1,17 +1,16 @@
 <ddi:DDIInstance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:instance:3_2 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd" xmlns:ddi="ddi:instance:3_2" xmlns:pr="ddi:ddiprofile:3_2" xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml" versionDate="2014-07-24">
-  <r:URN>urn:ddi:uk.cls:caddies_v012:1.0.0</r:URN>	
+  <r:URN>urn:ddi:uk.closer:questionnaire:1.0.0</r:URN>	
   <pr:DDIProfile xml:lang="en-GB" versionDate="2014-07-24">
-      <r:URN>urn:ddi:uk.cls:caddies_v012_profile_3_2:1.0.0</r:URN>
+      <r:URN>urn:ddi:uk.closer:questionnaire_profile_3_2:1.0.0</r:URN>
       <pr:DDIProfileName>
-      <r:String xml:lang="en-GB">DDI3.2 Profile as implemented in CADDIES version 0.12</r:String>
+      <r:String xml:lang="en-GB">CLOSER's DDI3.2 Questionnaire Profile</r:String>
       </pr:DDIProfileName>
       <r:Label>
-      <r:Content xml:lang="en-GB">CADDIES v0.12 DDI3.2 Profile</r:Content>
+      <r:Content xml:lang="en-GB">DDI3.2 Profile used throughout CLOSER for the documentation of questionnaires</r:Content>
       </r:Label>
       <r:Description>
       <r:Content xml:lang="en-GB">
         <xhtml:pre>
-          DDI3.2 Profile as implemented in CADDIES v0.12 and exportable as xml.
           In this document, I explicitely include as Used the elements implemented in the software.
           Contrary to DDI specifications, I do not assume that all the child-elements of a Used element are used.
           I specify the xpath predicate [1] when I implement a non-repeatable version of a repeatable DDI element.
@@ -69,111 +68,111 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:Purpose"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:Purpose/r:Content" limitMaxOccurs="1"/>
       
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:DataCollectionModuleName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:DataCollectionModuleName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme" limitMaxOccurs="1">
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme" limitMaxOccurs="1">
         <pr:AlternateName>
-        <r:String xml:lang="en">spine </r:String>
+        <r:String xml:lang="en">spine</r:String>
         </pr:AlternateName>
       </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:ControlConstructSchemeName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:ControlConstructSchemeName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:ControlConstructSchemeName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:ControlConstructSchemeName/r:String" limitMaxOccurs="1"/>
 
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/d:ConstructName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/d:ConstructName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ConstructName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ConstructName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference/r:TypeOfObject"/>
 
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ConstructName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ConstructName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command">
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:ConstructName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:ConstructName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:InitialValue"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command">
         <pr:Instructions>
         <r:Content xml:lang="en">validation: only_integer allow_nil</r:Content>
         </pr:Instructions>
       </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command/r:CommandContent"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command/r:ProgramLanguage"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command/r:CommandContent"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command/r:ProgramLanguage"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ControlConstructReference"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ControlConstructReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:Loop/d:ControlConstructReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command/r:CommandContent"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:InitialValue/r:Command/r:ProgramLanguage"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:LoopWhile"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command/r:CommandContent"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:LoopWhile/r:Command/r:ProgramLanguage"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:ControlConstructReference"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:ControlConstructReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Loop/d:ControlConstructReference/r:TypeOfObject"/>
 
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ConstructName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ConstructName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition">
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ConstructName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ConstructName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:IfCondition">
         <pr:AlternateName>
-        <r:String xml:lang="en">condition </r:String>
+        <r:String xml:lang="en">Condition</r:String>
         </pr:AlternateName>
       </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command">
-        <pr:Instructions>
-        <r:Content xml:lang="en">validation: presence ascii_format</r:Content>
-        </pr:Instructions>
-      </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command/r:CommandContent"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command/r:ProgramLanguage"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:TypeOfObject"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:TypeOfObject"/>
-
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct">
-        <pr:AlternateName>
-        <r:String xml:lang="en">question component </r:String>
-        </pr:AlternateName>
-      </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ConstructName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ConstructName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference">
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command">
         <pr:Instructions>
         <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference/r:TypeOfObject"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:QuestionConstruct/d:ResponseUnit">
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command/r:CommandContent"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:IfCondition/r:Command/r:ProgramLanguage"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ThenConstructReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:IfThenElse/d:ElseConstructReference/r:TypeOfObject"/>
+
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct">
+        <pr:AlternateName>
+        <r:String xml:lang="en">Question Component</r:String>
+        </pr:AlternateName>
+      </pr:Used>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/d:ConstructName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/d:ConstructName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference">
+        <pr:Instructions>
+        <r:Content xml:lang="en">validation: presence</r:Content>
+        </pr:Instructions>
+      </pr:Used>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/r:QuestionReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/d:ResponseUnit">
         <pr:Instructions>
         <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used>
 
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:ConstructName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:ConstructName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:DisplayText" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:DisplayText/d:LiteralText"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:ControlConstructScheme/d:StatementItem/d:DisplayText/d:LiteralText/d:Text"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem">
+      <pr:AlternateName>
+        <r:String xml:lang="en">Statement</r:String>
+        </pr:AlternateName>
+      </pr:Used>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/d:ConstructName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/d:ConstructName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/d:DisplayText" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/d:DisplayText/d:LiteralText"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:StatementItem/d:DisplayText/d:LiteralText/d:Text"/>
 
 
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:InstrumentSchemeName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:InstrumentSchemeName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/d:InstrumentName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/d:InstrumentName/r:String" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/d:ControlConstructReference"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:DataCollection/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:InstrumentSchemeName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:InstrumentSchemeName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:InstrumentName" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:InstrumentName/r:String" limitMaxOccurs="1"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:URN"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:TypeOfObject"/>
 
 
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme" limitMaxOccurs="2">
@@ -196,14 +195,10 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText/d:LiteralText" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionText/d:LiteralText/d:Text">
         <pr:Instructions>
-        <r:Content xml:lang="en">validation: presence ascii_format</r:Content>
+        <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionIntent">
-        <pr:Instructions>
-        <r:Content xml:lang="en">validation: ascii_format</r:Content>
-        </pr:Instructions>
-      </pr:Used> 
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionIntent"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionIntent/r:Content" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomainReference"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomainReference/r:URN"/>
@@ -221,6 +216,7 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/r:CodeListReference"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/r:CodeListReference/r:URN"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/r:CodeListReference/r:TypeOfObject"/>
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:CodeDomain/r:ResponseCardinality"/>
 
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:StructuredMixedResponseDomain/d:ResponseDomainInMixed"/>
@@ -253,14 +249,10 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionText/d:LiteralText" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionText/d:LiteralText/d:Text">
         <pr:Instructions>
-        <r:Content xml:lang="en">validation: presence ascii_format</r:Content>
+        <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used>       
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionIntent">
-        <pr:Instructions>
-        <r:Content xml:lang="en">validation: ascii_format</r:Content>
-        </pr:Instructions>
-      </pr:Used> 
+      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionIntent"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionIntent/r:Content" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:GridDimension" limitMaxOccurs="2"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:GridDimension/d:CodeDomain"/>
@@ -337,10 +329,10 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category/r:Label" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CategoryScheme/l:Category/r:Label/r:Content" limitMaxOccurs="1">
         <pr:AlternateName>
-        <r:String xml:lang="en">category text </r:String>
+        <r:String xml:lang="en">category text</r:String>
         </pr:AlternateName>
         <pr:Instructions>
-        <r:Content xml:lang="en">validation: presence ascii_format</r:Content>
+        <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used> 
 
@@ -353,11 +345,8 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/r:URN"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/r:Label" limitMaxOccurs="1"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/r:Label/r:Content" limitMaxOccurs="1">
-        <pr:AlternateName>
-        <r:String xml:lang="en">short description </r:String>
-        </pr:AlternateName>
         <pr:Instructions>
-        <r:Content xml:lang="en">validation: presence ascii_format</r:Content>
+        <r:Content xml:lang="en">validation: presence</r:Content>
         </pr:Instructions>
       </pr:Used>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code"/>
@@ -365,37 +354,6 @@
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code/r:CategoryReference/r:URN"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code/r:CategoryReference/r:TypeOfObject"/>
       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code/r:Value"/>
-
-
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme">
-        <pr:Instructions>
-        <r:Content xml:lang="en">one scheme for each type of representation used: text, numeric, datetime</r:Content>
-        </pr:Instructions>
-      </pr:Used>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedRepresentationSchemeName" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedRepresentationSchemeName/r:String" limitMaxOccurs="1"/>
-
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Label" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Label/r:Content" limitMaxOccurs="1"/>
-
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:Label" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:Label/r:Content" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:NumberRange" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:NumberRange/r:Low"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:NumberRange/r:High"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedNumericRepresentation/r:NumericTypeCode"/>
-
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation/r:URN"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation/r:Label" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation/r:Label/r:Content" limitMaxOccurs="1"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation/r:DateFieldFormat"/>
-      <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedDateTimeRepresentation/r:DateTypeCode"/>
 
   </pr:DDIProfile>
 </ddi:DDIInstance>
